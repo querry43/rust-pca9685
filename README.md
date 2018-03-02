@@ -6,12 +6,19 @@ The Rust `pca9685` crate is for manipulating the [Adafruit 16-Channel servo driv
 Example
 -------
 
-```
+```rust
 extern crate pca9685;
 extern crate i2cdev;
 
 use pca9685::pwm::PWM;
 use i2cdev::linux::{LinuxI2CError};
+
+fn main() {
+    match move_servo() {
+        Ok(()) => println!("it worked!"),
+        Err(err) => println!("uhoh: {}", err),
+    }
+}
 
 fn move_servo() -> Result<(), LinuxI2CError> {
     let mut pwm = PWM::new("/dev/i2c-1", 0x40)?;

@@ -2,6 +2,13 @@
 name = "pca9685"
 version = "0.1.0"
 authors = ["Matt Harrington <querry43@gmail.com>"]
+build = "build.rs"
 
 [dependencies]
 i2cdev = "0.3.2"
+
+[build-dependencies]
+skeptic = "0.13"
+
+[dev-dependencies]
+skeptic = "0.13"
