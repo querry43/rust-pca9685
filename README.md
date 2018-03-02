@@ -1,7 +1,7 @@
 rust-pca9685
 ============
 
-The Rust `pca9685` crate is for manipulating the [Adafruit 16-Channel servo driver](https://www.adafruit.com/product/815) and other boards based on the PCA9685.
+The Rust `pca9685` crate is for manipulating the [Adafruit 16-Channel servo driver](https://www.adafruit.com/product/815) and other boards based on the PCA9685.  I wrote this before I found i2c-pca9685 with nearly the identical interface.  You should probably use that instead.
 
 Example
 -------
